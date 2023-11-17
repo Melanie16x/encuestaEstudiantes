@@ -10,7 +10,7 @@ const divCareer = document.getElementById('divCarrera');
 const divSubject = document.getElementById('divMateria');
 const edad = document.getElementById('edad');
 const getLocality = async ()=>{
-    const res = await fetch('/api/localities');
+    const res = await fetch('/api/localities')
     const localidades = await res.json();
     localidades.forEach(localidad => {
         selectLocalidad.innerHTML += `<option value="${localidad.id_locality}">${localidad.name}</option>`
