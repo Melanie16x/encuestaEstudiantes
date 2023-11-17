@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body
+    style="
+      background-color: rgb(221, 221, 221);
+      font-family: Arial, Helvetica, sans-serif;
+    "
+  >
+    <div class="container bg-body shadow rounded p-0 my-5">
+      <main>
+        <div>
+          <div class="bg-dark p-2 rounded">
+            <h3 class="text-white text-center">
+              Encuesta de Planificación Académica
+            </h3>
+          </div>
+          <div class="container">
+            <form
+              action=""
+              class="g-3 needs-validation"
+              id="formEncuesta"
+              enctype="multipart/form-data"
+            >
+              <div class="my-3 text-primary">
+                <h5>Datos Personales</h5>
+              </div>
+              <div class="">
+                <label for="validatonTooltip04" class="form-label"
+                  ><b>¿Cuál es su localidad?</b></label
+                >
+                <select class="form-select input" id="localidad" required>
+                  <option selected disabled>Seleccione una localidad</option>
+                </select>
+              </div>
+              
+              <div class="my-3">
+                <label for="validationTooltip04" class="form-label"
+                  ><b>¿Cuál es su género?</b></label
+                >
+                <select class="form-select input" id="genero" required>
+                  <option selected disabled>Selecciona una opción</option>
+                  <option value= 1 >Masculino</option>
+                  <option value= 2 >Femenino</option>
+                  <option value= 3 >Otros</option>
+                </select>
+              </div>
+              <div class="my-3">
+                <label for="validationTooltipUsername" class="form-label"
+                  ><b
+                    >¿Cuál es su edad?</b
+                  ></label
+                >
+                <div class="input-group has-validation" id="divMateria">
+                  <input
+                  type="number"
+                  class="form-control input"
+                  id="edad"
+                  aria-describedby="validationTooltipUsernamePrepend"
+                  required
+                />
+                </div>
+              </div>
+              <div class="my-3 text-primary">
+                <h5>Datos Académicos</h5>
+              </div>
+              <div class="my-3">
+                <label for="validationTooltip02" class="form-label"
+                  ><b>¿Qué carrera está cursando?</b></label>
+                <div class="input-group has-validation" id="divCarrera">
+                  <select class="form-select" id="carrera" required>
+                    <option selected disabled>Seleccione una carrera</option>
+                    <option value="TEC. SUP. EN DESARROLLO DE SOFTWARE"> TEC. SUP. EN DESARROLLO DE SOFTWARE </option>
+                    <option value="TEC. SUP. TELECOMUNICACIONES"> TEC. SUP. TELECOMUNICACIONES </option>
+                    <option value="TEC. SUP. MECATRÓNICA"> TEC. SUP. MECATRÓNICA </option>
+                    <option value="TEC. SUP. EN QUIMICA INDUSTRIAL"> TEC. SUP. EN QUIMICA INDUSTRIAL </option>
+                  </select>
+                </div>
+              </div>
+              <div class="my-3">
+                <label for="validationTooltipUsername" class="form-label"
+                  ><b
+                    >¿Qué materia le parece la mas adecuada a su curso?</b
+                  ></label
+                >
+                <div class="input-group has-validation" id="divMateria">
+                  <select class="form-select" id="materiaAdecuada" required>
+                    <option selected disabled>Seleccione una materia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="">
+                <label for="validationTooltipUsername" class="form-label"
+                  ><b>¿Qué materia agregaría a su curso?</b></label
+                >
+                <div class="input-group has-validation">
+                  <input
+                    type="text"
+                    class="form-control input"
+                    id="materiaAgregar"
+                    aria-describedby="validationTooltipUsernamePrepend"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="my-3">
+                <label for="validationTooltipUsername" class="form-label"
+                  ><b
+                    >En cuanto al contenido en general, ¿le parece actualizado u
+                    obsoleto?</b
+                  ></label
+                >
+                <div class="input-group has-validation">
+                  <select class="form-select input" id="esObsoleto" required>
+                    <option value="Otro">Otro</option>
+                    <option value="Actualizado">Actualizado</option>
+                    <option value="Obsoleto">Obsoleto</option>
+                  </select>
+                </div>
+              </div>
+              <div class="my-3">
+                <label for="validationTooltipUsername" class="form-label"
+                  ><b
+                    >¿Consideras que alguna materia es innecesaria?</b
+                  ></label
+                >
+                <div class="input-group has-validation">
+                  <input
+                    type="text"
+                    class="form-control input"
+                    id="materiaInnecesaria"
+                    aria-describedby="validationTooltipUsernamePrepend"
+                  />
+                </div>
+              </div>
+              <div class="mb-1 mt-3">
+                <button class="btn btn-primary" type="submit">Enviar</button>
+                <button class="btn btn-secondary" type="reset">
+                  Borrar campos
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <!-- place footer here -->
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script 
+    src="/js/app.js">
+
+    </script>
+  </body>
+</html>
