@@ -15,7 +15,7 @@ const getLocality = async ()=>{
     localidades.forEach(localidad => {
         selectLocalidad.innerHTML += `<option value="${localidad.id_locality}">${localidad.name}</option>`
     });
-};
+}
 
 questionCareer.addEventListener('change',()=>{
     switch (questionCareer.value) {
