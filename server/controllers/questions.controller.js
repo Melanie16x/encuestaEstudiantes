@@ -1,4 +1,4 @@
-import { Question } from "../models/associations/associations.js";
+import { Question } from "../models/associations/associations.js"
 
 export const createQuestion = async (req, res) => {
     const {question} = req.body;
